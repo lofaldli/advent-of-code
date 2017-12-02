@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 import sys, csv
-from functools import reduce
-from itertools import permutations
+from itertools import combinations
 
 def part1(rows):
-    print(reduce(lambda tot, row: tot + max(row) - min(row), rows, 0))
+    print(sum(max(r) - min(r) for r in rows))
 
 def part2(rows):
-    total = 0
-    for row in rows:
-        total += sum(x // y for x, y in permutations(row, 2) if x%y ==0)
-    print(total)
+    print(sum(y // x for r in rows for x, y in combinations(sorted(r), 2) if y % x == 0))
 
 tsvin = csv.reader(sys.stdin, delimiter='\t')
 rows = [list(map(int, row)) for row in tsvin]
