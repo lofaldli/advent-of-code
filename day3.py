@@ -1,4 +1,4 @@
-import sys
+from aocd import data
 
 def walk(pos, dir):
     return pos[0] + dir[0], pos[1] + dir[1]
@@ -16,7 +16,7 @@ def ulam(x, start=(0,0)):
             dir = (-dir[1], dir[0]) # turn left
     return pos
 
-number = int(sys.argv[1])
+number = int(data)
 print('part 1:', sum(map(abs, ulam(number))))
 
 pos = (0,0)
