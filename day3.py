@@ -1,4 +1,5 @@
 from aocd import data
+from collections import defaultdict
 
 def walk(pos, dir):
     return pos[0] + dir[0], pos[1] + dir[1]
@@ -20,12 +21,13 @@ number = int(data)
 print('part 1:', sum(map(abs, ulam(number))))
 
 pos = (0,0)
-mem = {pos: 1}
+mem = defaultdict(int)
+mem[pos] = 1
 i = 2
 while mem[pos] < number:
     pos = ulam(i)
     i+=1
-    mem[pos] = sum(map(lambda dir: mem.get(walk(pos, dir), 0), ((-1, 1), (0, 1), (1, 1),
-                                                                (-1, 0),         (1, 0),
-                                                                (-1,-1), (0,-1), (1,-1))))
+    mem[pos] = sum(map(lambda dir: mem[walk(pos, dir)], ((-1, 1), (0, 1), (1, 1),
+                                                         (-1, 0),         (1, 0),
+                                                         (-1,-1), (0,-1), (1,-1))))
 print('part 2:', mem[pos])
