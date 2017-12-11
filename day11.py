@@ -2,8 +2,8 @@ from aocd import data
 
 # https://www.redblobgames.com/grids/hexagons/#neighbors-cube
 DIRS = {         'n': (0, 1,-1),
-    'nw': (-1, 1,0),          'ne': ( 1,0,-1),
-    'se': ( 1,-1,0),          'sw': (-1,0, 1),
+    'nw': (-1,1,0),          'ne': (1,0,-1),
+    'sw': (-1,0,1),          'se': (1,-1,0),          
                  's': (0,-1, 1)}
 
 def dist(a, b=(0,0,0)):
