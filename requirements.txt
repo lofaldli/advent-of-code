@@ -1,1 +1,1 @@
-advent-of-code-data>=0.3
+advent-of-code-data>=0.4.2
