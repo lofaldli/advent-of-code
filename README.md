@@ -1,3 +1,3 @@
-using [wimglenn/advent-of-code-data](https://github.com/wimglenn/advent-of-code-data) to get data
+#  🎄🎅 [Advent of Code](https://adventofcode.com) solutions 💻⭐
 
-[![](https://imgs.xkcd.com/comics/regex_golf.png "xkcd 1313: Regex Golf")](https://xkcd.com/1313/)
+Using [wimglenn/advent-of-code-data](https://github.com/wimglenn/advent-of-code-data) as an easy way to get input data
