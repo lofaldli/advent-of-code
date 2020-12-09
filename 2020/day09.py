@@ -1,5 +1,5 @@
 from aocd import data
-from itertools import combinations, product
+from itertools import combinations
 
 def find_secret(numbers, N):
     for i, n in enumerate(numbers[N:]):
